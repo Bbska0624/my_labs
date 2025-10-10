@@ -1,77 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
 <head>
-  <meta charset="UTF-8">
-  <title>TheFacebook 2004</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Profile (thefacebook demo)</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="header">
-    <h1>[ thefacebook ]</h1>
-    <div class="menu">
-      <a href="#">home</a> | 
-      <a href="#">search</a> | 
-      <a href="#">global</a> | 
-      <a href="#">social net</a> | 
-      <a href="#">invite</a> | 
-      <a href="#">faq</a> | 
-      <a href="#">logout</a>
-    </div>
-  </div>
 
-  <div class="container">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <form class="search">
-        <label>quick search</label><br>
-        <input type="text">
-        <button>go</button>
-      </form>
-      <ul>
-        <li><a href="#">My Profile [ edit ]</a></li>
-        <li><a href="#">My Groups</a></li>
-        <li><a href="#">My Friends</a></li>
-        <li><a href="#">My Messages</a></li>
-        <li><a href="#">My Away Message</a></li>
-        <li><a href="#">My Mobile Info</a></li>
-        <li><a href="#">My Account</a></li>
-        <li><a href="#">My Privacy</a></li>
-      </ul>
-    </div>
-
-    <!-- Main content -->
-    <div class="main">
-      <h2>Scott Pearson’s Profile (This is you)</h2>
-      
-      <div class="profile">
-        <div class="picture">
-          <h3>Picture [ edit ]</h3>
-          <img src="https://via.placeholder.com/250x200" alt="Profile">
-          <p><a href="#">Visualize My Friends</a></p>
-          <p><a href="#">Edit My Profile</a></p>
-          <p><a href="#">My Account Preferences</a></p>
-          <p><a href="#">My Privacy Preferences</a></p>
+<div class="container">
+    <div class="header">
+        <h1>[ thefacebook ]</h1>
+        <div class="nav">
+            home &nbsp; search &nbsp; global &nbsp; social net &nbsp; invite &nbsp; faq &nbsp; logout
         </div>
-
-        <div class="info">
-          <h3>Information [ edit ]</h3>
-          <p><b>Name:</b> Scott Pearson, BS</p>
-          <p><b>Member Since:</b> Jan 12, 2005</p>
-          <p><b>Status:</b> Alumnus</p>
-          <p><b>Sex:</b> Male</p>
-          <p><b>Year:</b> 2004</p>
-          <p><b>Concentration:</b> Computing Sciences, Mathematics</p>
-          <p><b>Email:</b> pearsons2@scranton.edu</p>
-          <p><b>Phone:</b> 570-499-4818</p>
-          <p><b>High School:</b> Dunmore HS '00</p>
-          <p><b>Looking For:</b> Friendship, Dating, A Relationship</p>
-          <p><b>Interested In:</b> Women</p>
-          <p><b>Relationship Status:</b> Single</p>
-          <p><b>Political Views:</b> Liberal</p>
-          <p><b>Interests:</b> Drinking, Football, Basketball, Tennis</p>
-        </div>
-      </div>
     </div>
-  </div>
+
+    <!-- Гол Layout: table ашиглаж бүтэц үүсгэнэ -->
+    <table class="layout">
+        <tr>
+            <!-- Sidebar (зүүн) -->
+            <td class="left-col">
+                <div class="search">
+                    <input type="text" placeholder="quick search" />
+                    <input type="button" value="go" />
+                </div>
+
+                <div class="sidebar">
+                    <a href="#">My Profile [ edit ]</a>
+                    <a href="#">My Groups</a>
+                    <a href="#">My Friends</a>
+                    <a href="#">My Messages</a>
+                    <a href="#">My Away Message</a>
+                    <a href="#">My Mobile Info</a>
+                    <a href="#">My Account</a>
+                    <a href="#">My Privacy</a>
+                </div>
+
+                <div style="margin-top:18px;">
+                    <div class="section-title">Other Schools</div>
+                    <div style="padding:8px; font-size:13px; color:#4a5d86;">Scranton</div>
+                </div>
+            </td>
+
+            <!-- Main content (баруун) -->
+            <td class="main-col">
+                <!-- Дотоод table: зүүн-д зураг, баруун-д мэдээлэл -->
+                <table class="profile-table">
+                    <tr>
+                        <td style="width:350px; vertical-align:top; padding-right:18px;">
+                            <div class="section-title">Picture <small style="float:right; font-weight:400; opacity:0.9;">[ edit ]</small></div>
+                            <div class="picture-box">
+                                <img src="profile.jpg" alt="Profile photo" />
+                                <table class="actions">
+  <tr>
+    <td><a href="#">Visualize My Friends</a></td>
+  </tr>
+  <tr>
+    <td><a href="#">Edit My Profile</a></td>
+  </tr>
+  <tr>
+    <td><a href="#">My Account Preferences</a></td>
+  </tr>
+  <tr>
+    <td><a href="#">My Privacy Preferences</a></td>
+  </tr>
+</table>
+
+<table class="Connection">
+  <tr>
+    <td>This is you.</td>
+  </tr>
+</table>
+
+<table class="Access">
+  <tr>
+    <td>Scott is currently logged from a non-residental location.</td>
+  </tr>
+</table>
+
+                            </div>
+                        </td>
+
+                        <td style="vertical-align:top;">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <div class="section-title" style="flex:1;">Information</div>
+                                <div style="margin-left:12px; color:#2d62a8; font-weight:600;">Scranton</div>
+                            </div>
+
+                            <div class="info" style="margin-top:8px;">
+                                <div class="row">
+                                    <div class="label">Account Info:</div>
+                                    <div class="value">Name: Scott Pearson, BS</div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Member Since:</div>
+                                    <div class="value">January 12, 2005</div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Last Update:</div>
+                                    <div class="value">February 3, 2005</div>
+                                </div>
+
+                                <div style="height:8px;"></div>
+
+                                <div class="row">
+                                    <div class="label">Email:</div>
+                                    <div class="value"><a href="mailto:pearsons2@scranton.edu">pearsons2@scranton.edu</a></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Status:</div>
+                                    <div class="value">Alumnus/Alumna</div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Sex:</div>
+                                    <div class="value">Male</div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Year:</div>
+                                    <div class="value">2004</div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Concentration:</div>
+                                    <div class="value">Computing Sciences, Mathematics</div>
+                                </div>
+
+                                <div style="height:8px;"></div>
+
+                                <div class="row">
+                                    <div class="label">Phone:</div>
+                                    <div class="value">570-499-4818</div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">High School:</div>
+                                    <div class="value">Dunmore HS '00</div>
+                                </div>
+
+                                <div style="height:8px;"></div>
+
+                                <div class="row">
+                                    <div class="label">Screenname:</div>
+                                    <div class="value">ScottiePP7</div>
+                                </div>
+                                <div class="row">
+                                    <div class="label">Looking For:</div>
+                                    <div class="value">Friendship, Dating, A Relationship</div>
+                                </div>
+
+                                <div style="height:8px;"></div>
+
+                                <div class="row" style="border-bottom:0;">
+                                    <div class="label">Interested In:</div>
+                                    <div class="value">Women</div>
+                                </div>
+                            </div>
+
+                            <div class="footer" style="margin-top:12px;">
+                                Last login from a non-residential location. &nbsp; | &nbsp; Privacy settings
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
 </body>
 </html>
