@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <script>
+            var n=5;
+            var array=[];
+            for (var i=0; i<n; i++){
+                let x=parseInt(prompt((i+1)+ "-r toog oruul: "));
+                array.push(x);
+            }
+            function gcd(a, b){
+                while(b!=0){
+                    let r=a%b;
+                    a=b;
+                    b=r;
+                }
+                return a;
+            }
+            function lcm(a, b){
+                return (a*b)/gcd(a, b);
+            }
+            let result=array[0];
+            for(let i=1; i<array.length; i++){
+                result=lcm(result, array[i]);
+            }
+            document.write(result);
+
+        </script>
+    </body>
+</html>
