@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tesla_Web_Design</title>
+    <link rel="stylesheet" href="lab6.css">
+</head>
+<body>
+    <!-- FIXED HEADER -->
+    <header class="fixed-header">
+        <div class="logo"><img src="images/tesla.png"></div>
+        <nav class="main-nav">
+            <a href="#">Vehicles</a>
+            <a href="#">Energy</a>
+            <a href="#">Charging</a>
+            <a href="#">Discover</a>
+            <a href="#">Shop</a>
+        </nav>
+        <div class="header-right">
+            <a href="#"><img src="images/question_mark.png" width="25" height="25"></a>
+            <a href="#"><img src="images/world.png" width="20" height="20"></a>
+            <a href="#"><img src="images/profile.png" width="20" height="20"></a>
+        </div>
+    </header>
+
+
+
+
+    <!-- MAIN CONTENT (header-ийн доор эхлэх) -->
+    <main class="main-content">
+        <!-- Карусель -->
+        <div class="carousel-container">
+            <button class="prev">&#10094;</button>
+            <div class="carousel">
+                <div class="slide"><img src="images/cybertruck1.png">
+                    <h1>CyberTruck</h1>
+                    <button class="Order">Order Now</button>
+                    <button class="learnmore">Learn More</button>
+                </div>
+                <div class="slide"><img src="images/tesla_model_y.jpeg">
+                    <h1>Model Y</h1>
+                    <button class="Order">Order Now</button>
+                    <button class="learnmore">Learn More</button>
+                </div>
+                <div class="slide"><img src="images/Tesla_Model_3.jpg">
+                    <h2>Model 3</h2>
+                    <button class="Order1">Order Now</button>
+                    <button class="learnmore1">Learn More</button>
+                </div>
+            </div>
+            <button class="next">&#10095;</button>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <div class="section-container">
+            <button class="prev1">&#10094;</button>
+            <div class="section">
+                <div class="slide1">
+                    <img src="images/Tesla_Model_33.jpg">
+                    <h1>Model 3</h1>
+                    <p class="subtitle">1.99% APR Ending December 4</p>
+                    <button class="Order2">Order Now</button>
+                    <button class="learnmore2">Learn More</button>
+                </div>
+                <div class="slide1">
+                    <img src="images/tesla_model_yy.jpeg">
+                    <h1>Model Y</h1>
+                    <p class="subtitle">1.99% APR Ending December 4</p>
+                    <button class="Order2">Order Now</button>
+                    <button class="learnmore2">Learn More</button>
+                </div>
+                <div class="slide1">
+                    <img src="images/cybertruck2.jpg">
+                    <h1>CyberTruck</h1>
+                    <p class="subtitle">2.49% APR Ending December 4</p>
+                    <button class="Order2">Order Now</button>
+                    <button class="learnmore2">Learn More</button>
+                </div>
+                <div class="slide1">
+                    <img src="images/model_x.jpg">
+                    <h1>Model X</h1>
+                    <p class="subtitle">3.99% APR Available</p>
+                    <button class="Order2">Order Now</button>
+                    <button class="learnmore2">Learn More</button>
+                </div>
+                <div class="slide1">
+                    <img src="images/model_s.jpg">
+                    <h1>Model S</h1>
+                    <p class="subtitle">3.99% APR Available</p>
+                    <button class="Order2">Order Now</button>
+                    <button class="learnmore2">Learn More</button>
+                </div>
+            </div>
+            <button class="next1">&#10095;</button>
+            <div class="dots1">
+                <span class="dot1 active"></span>
+                <span class="dot1"></span>
+                <span class="dot1"></span>
+                <span class="dot1"></span>
+                <span class="dot1"></span>  <!-- 5 БОЛГОХ -->
+            </div>
+        </div>
+
+        <!-- Current Offers хэсэг -->
+<section class="offers-section">
+    <div class="offers-container">
+        <!-- Current Offers карт -->
+        <div class="offer-card">
+            <div class="offer-content">
+                <h2 class="offer-title">Current Offers</h2>
+                <p class="offer-description">Explore limited-time offers on Tesla vehicles.</p>
+                <a href="#" class="learn-more-link">Learn More</a>
+            </div>
+            <div class="offer-image">
+                <!-- Энд зургаа оруулах -->
+                <img src="images/ss2 (2).png" alt="Current Offers">
+            </div>
+        </div>
+
+        <!-- American Heroes карт -->
+        <div class="offer-card hero-card">
+            <div class="offer-content">
+                <h2 class="offer-title">American Heroes</h2>
+                <p class="offer-description">$500 off for military, first responders, healthcare, teachers and students.</p>
+                <a href="#" class="learn-more-link">Learn More</a>
+            </div>
+            <div class="offer-image">
+                <!-- Энд зургаа оруулах -->
+                <img src="images/ss2 (1).png" alt="American Heroes">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FSD Section -->
+<section class="fsd-section">
+    <div class="fsd-container">
+        <!-- Зүүн тал: Video with overlay -->
+        <div class="fsd-video-side">
+            <div class="video-container">
+                <!-- Video эсвэл thumbnail -->
+                <img src="images/fsd_video_thumbnail.jpg" alt="FSD Video" class="video-thumbnail">
+                
+                <!-- Video дээгүүр overlay элементүүд -->
+                <div class="video-overlay">
+                    <!-- Title дээд талд -->
+                    <h1 class="video-overlay-title">Full Self-Driving (Supervised)</h1>
+                    
+                    <!-- Төвд байрлах товчнууд -->
+                    <div class="video-overlay-buttons">
+                        <button class="overlay-demo-drive">Demo Drive</button>
+                        <button class="overlay-view-report">View Report</button>
+                    </div>
+                    
+                    <!-- Play button -->
+                    <div class="overlay-play-button">
+                        <span class="play-icon">▶</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Баруун тал: Текст + Зураг (өмнөх шигээ) -->
+        <div class="fsd-content-side">
+            <h2 class="features-title">Features That Come Standard</h2>
+            
+            <div class="discover-section">
+                <button class="discover-btn">Discover</button>
+            </div>
+            
+            <div class="features-image">
+                <img src="images/features_image.jpg" alt="Tesla Features">
+            </div>
+            
+            <div class="bottom-actions">
+                <div class="action-item">
+                    <span class="action-icon">?</span>
+                    <span class="action-text">Ask a Question "What's Dog Mode?"</span>
+                </div>
+                <div class="action-item">
+                    <span class="action-icon">🚗</span>
+                    <span class="action-text">Schedule a Drive Today</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+
+
+
+        <!-- Илүү их контент нэмэхэд скролл үүснэ -->
+        <div style="height: 1000px; background: #f5f5f5;">
+            <!-- Энд илүү их контент байна -->
+        </div>
+
+
+
+
+
+    <footer class="fixed-footer">
+        <div class="ask-container">
+            <div class="comment">
+                <a href="#"><img src="images/comment.png" width="25" height="25" alt="comment"></a>
+            </div>
+            <input type="text" class="ask-input" placeholder="Ask a Question">
+        </div>
+
+        <button class="schedule">
+            <div class="steering-wheel"><a href="#"><img src="images/steering-wheel.png" width="25" height="25"></a></div>
+            <span>Schedule a Drive </span>
+        </button>
+    </footer>
+
+    <script src="lab6.js"></script>
+</body>
+</html>
