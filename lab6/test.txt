@@ -200,3 +200,56 @@
 
 .prev { left: 20px; }
 .next { right: 20px; }
+
+
+
+
+
+
+
+
+<!-- Баруун тал: Текст + Зураг (өмнөх шигээ) -->
+        <div class="fsd-content-side">
+            <h2 class="features-title">Features That Come Standard</h2>
+            
+            <div class="discover-section">
+                <button class="discover-btn">Discover</button>
+            </div>
+            
+            <div class="features-image">
+                <img src="images/features_image.jpg" alt="Tesla Features">
+            </div>
+            
+            <div class="bottom-actions">
+                <div class="action-item">
+                    <span class="action-icon">?</span>
+                    <span class="action-text">Ask a Question "What's Dog Mode?"</span>
+                </div>
+                <div class="action-item">
+                    <span class="action-icon">🚗</span>
+                    <span class="action-text">Schedule a Drive Today</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        
+position: fixed; /* ЧУХАЛ: fixed байрлал */
+    top: 0; /* Дээд талд наалдах */
+    left: 0;
+    width: 100%;
+    height: 60px; /* Header-ийн өндөр */
+    background-color: white; /*  background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    z-index: 1000; /* Бусад элементүүдээс дээгүүр */
+    backdrop-filter: blur(10px); /* Зөөлөн blur эффект */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);

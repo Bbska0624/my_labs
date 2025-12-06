@@ -140,11 +140,15 @@
 <!-- FSD Section -->
 <section class="fsd-section">
     <div class="fsd-container">
-        <!-- Зүүн тал: Video with overlay -->
+        <!-- Зүүн тал: Video 60% -->
         <div class="fsd-video-side">
             <div class="video-container">
-                <!-- Video эсвэл thumbnail -->
-                <img src="images/fsd_video_thumbnail.jpg" alt="FSD Video" class="video-thumbnail">
+                <!-- Video элемент -->
+                <video class="video-player" autoplay muted loop playsinline>
+                    <source src="images/video.mp4" type="video/mp4">
+                    <source src="images/video.webm" type="video/webm">
+                    Таны хөтөч видео тоглуулахыг дэмждэггүй.
+                </video>
                 
                 <!-- Video дээгүүр overlay элементүүд -->
                 <div class="video-overlay">
@@ -156,39 +160,21 @@
                         <button class="overlay-demo-drive">Demo Drive</button>
                         <button class="overlay-view-report">View Report</button>
                     </div>
-                    
-                    <!-- Play button -->
-                    <div class="overlay-play-button">
-                        <span class="play-icon">▶</span>
-                    </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Баруун тал: Текст + Зураг (өмнөх шигээ) -->
-        <div class="fsd-content-side">
-            <h2 class="features-title">Features That Come Standard</h2>
-            
-            <div class="discover-section">
-                <button class="discover-btn">Discover</button>
-            </div>
-            
-            <div class="features-image">
-                <img src="images/features_image.jpg" alt="Tesla Features">
-            </div>
-            
-            <div class="bottom-actions">
-                <div class="action-item">
-                    <span class="action-icon">?</span>
-                    <span class="action-text">Ask a Question "What's Dog Mode?"</span>
-                </div>
-                <div class="action-item">
-                    <span class="action-icon">🚗</span>
-                    <span class="action-text">Schedule a Drive Today</span>
+
+        <!-- Баруун тал: Зураг 40% -->
+        <div class="fsd-image-side">
+            <div class="image-container">
+                <img src="images/woman.jpg" alt="Woman" class="woman-image">
+                <div class="image-overlay">
+                    <h1 class="image-title">Features That Come Standard</h1>
+                    <button class="discover-btn">Discover</button>
                 </div>
             </div>
         </div>
-    </div>
+    </div>  
 </section>
 
     </main>
@@ -196,10 +182,19 @@
 
 
 
-        <!-- Илүү их контент нэмэхэд скролл үүснэ -->
-        <div style="height: 1000px; background: #f5f5f5;">
-            <!-- Энд илүү их контент байна -->
-        </div>
+    <!-- Илүү их контент нэмэхэд скролл үүснэ -->
+    <div class="last">
+        <nav class="last-nav">
+            <a href="#">Tesla 2025</a>
+            <a href="#">Privacy & Legal</a>
+            <a href="#">Vehicle Recalls</a>
+            <a href="#">Contact</a>
+            <a href="#">News</a>
+            <a href="#">Get Updates</a>
+            <a href="#">Locations</a>
+            <a href="#">Learn</a>
+        </nav>
+    </div>
 
 
 
