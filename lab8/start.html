@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game - Start</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        body {
+            background-color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .start-container {
+            text-align: center;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .game-title {
+            font-size: 48px;
+            color: #5e63ba;
+            margin-bottom: 20px;
+        }
+
+        .game-icon {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 30px;
+        }
+
+        .start-button {
+            background: #7376ba;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 20px 60px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 40px 0;
+        }
+
+        .start-button:hover {
+            background: #8286c9;
+        }
+
+        .game-description {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="start-container">
+        <h1 class="game-title">Hangman Game</h1>
+        <img src="image/icon.png" alt="Hangman Icon" class="game-icon">
+        <br>
+        <a href="index.html">
+            <button class="start-button">ТОГЛОХ</button>
+        </a>
+    <!--<p class="game-description">
+            Үгийг таах сонгодог тоглоом. Үсэг бүрээс сонгон, зөв үгийг олох хүртэл таамагла!
+        </p>-->
+    </div>
+</body>
+</html>
