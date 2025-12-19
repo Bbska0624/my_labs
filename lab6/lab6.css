@@ -784,3 +784,127 @@ body {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+/* ====== RESPONSIVE MEDIA QUERIES ====== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .carousel-container {
+        height: 400px;
+    }
+    
+    .slide h1, .slide h2 {
+        font-size: 36px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 100%;
+    }
+    
+    .slide .Order, .slide .learnmore,
+    .slide .Order1, .slide .learnmore1 {
+        padding: 8px 20px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        text-align: center;
+    }
+    
+    .slide .Order { left: calc(50% - 160px); }
+    .slide .learnmore { left: calc(50% + 10px); }
+    .slide .Order1 { left: calc(50% - 160px); }
+    .slide .learnmore1 { left: calc(50% + 10px); }
+    
+    .fsd-container {
+        flex-direction: column;
+    }
+    
+    .fsd-video-side,
+    .fsd-image-side {
+        flex: 0 0 100%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .fixed-header {
+        padding: 0 15px;
+    }
+    
+    .main-nav {
+        display: none; /* Mobile дээр цэс нуух */
+    }
+    
+    .carousel-container {
+        height: 300px;
+    }
+    
+    .slide h1, .slide h2 {
+        font-size: 24px;
+        top: 20px;
+    }
+    
+    .prev, .next,
+    .prev1, .next1 {
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    .offers-container {
+        flex-direction: column;
+    }
+    
+    .offer-card {
+        margin-bottom: 20px;
+    }
+    
+    .last-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .ask-container {
+        width: 300px;
+        left: 20px;
+    }
+    
+    .schedule {
+        left: 330px;
+        padding: 10px 20px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .carousel-container {
+        height: 250px;
+    }
+    
+    .slide .Order, .slide .learnmore,
+    .slide .Order1, .slide .learnmore1 {
+        top: 80px;
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+    
+    .ask-container {
+        width: 200px;
+    }
+    
+    .schedule {
+        left: 230px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    .video-overlay-title,
+    .image-title {
+        font-size: 24px;
+    }
+}

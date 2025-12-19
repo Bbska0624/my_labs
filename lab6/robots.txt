@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bbska0624.github.io/my_labs/sitemap.xml
