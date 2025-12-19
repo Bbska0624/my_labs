@@ -17,13 +17,13 @@ body {
 .app {
     display: flex;
     flex-direction: column;
-    align-items: center; /* гарчиг + container голд */
+    align-items: center;
     margin-top: 30px;
 }
 .header {
     display: flex;
-    align-items: center;   /* босоо тэнхлэгээр голлуулах */
-    gap: 12px;             /* үг ба зурагны зай */
+    align-items: center;  
+    gap: 12px;   
 }
 .title {
     margin-top: 50px;
@@ -31,7 +31,7 @@ body {
     font-size: 50px;
 }
 .title-icon {
-    width: 100px;           /* зургийн хэмжээ */
+    width: 100px;    
     height: auto;
 }
 
@@ -177,7 +177,6 @@ body {
 
 
 
-/* Буцах товчны стиль */
 .back-button {
     position: absolute;
     top: 20px;

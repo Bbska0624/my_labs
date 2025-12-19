@@ -12,7 +12,7 @@ const maxGuesses = 6;
 const resetGame = () => {
     correctLetters = [];
     wrongGuessCount = 0;
-    currentIndex = 0; // Эхний үсгээс эхлэх
+    currentIndex = 0; // ehnii usgees ehlene
     hangmanImage.src = `image/${wrongGuessCount}.png`;
     guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
     keyboardDiv.querySelectorAll("button").forEach(btn => {
@@ -50,7 +50,7 @@ const initGame = (button, clickedLetter) => {
     const expectedLetter = currentWord[currentIndex];
     
     if (clickedLetter === expectedLetter) {
-        // Зөв хариулт
+        //zuv hariult
         correctLetters.push(clickedLetter);
         wordDisplay.querySelectorAll("li")[currentIndex].innerText = clickedLetter;
         wordDisplay.querySelectorAll("li")[currentIndex].classList.add("guessed");
@@ -58,10 +58,10 @@ const initGame = (button, clickedLetter) => {
         button.classList.add("correct");
         button.classList.remove("wrong");
         
-        currentIndex++; // ЗӨВХӨН НЭГ ИНДЕКСЭЭР ШИЛЖИХ
+        currentIndex++; // zuvhun neg indexeer shiljine
         
     } else {
-        // Буруу хариулт
+        // buruu hariult
         wrongGuessCount++;
         hangmanImage.src = `image/${wrongGuessCount}.png`;
         
@@ -76,7 +76,7 @@ const initGame = (button, clickedLetter) => {
     if (currentIndex === currentWord.length) return gameOver(true);
 }
 
-// Үсгийн товчлууруудыг үүсгэх
+// tovchluuruudiig uusgeh
 mongolLetters.forEach(letter => {
     const button = document.createElement("button");
     button.innerText = letter;
