@@ -2,222 +2,426 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Tesla_Web_Design</title>
-    <meta name="description" content="Explore Tesla electric vehicles - Model 3, Model Y, Cybertruck, Model X, Model S. Order now with special financing offers. Experience Full Self-Driving technology.">
-    <link rel="canonical" href="https://bbska0624.github.io/my_labs/lab6/lab6.html">
-
-    <!-- ЭНЭ OPENGraph TAGS НЭМЭХ -->
-    <meta property="og:title" content="Tesla Electric Vehicles | Model 3, Model Y, Cybertruck">
-    <meta property="og:description" content="Explore Tesla electric vehicles with special financing offers. Order Model 3, Model Y, Cybertruck today.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <title>Tesla Electric Vehicles: Model 3, Model Y, Cybertruck, Model X, Model S | Official</title>
+    <meta name="description" content="Discover Tesla electric cars with special financing offers. Order Model 3, Model Y, Cybertruck, Model X, or Model S today. Experience Full Self-Driving technology.">
+    <meta name="keywords" content="Tesla, electric vehicles, Model 3, Model Y, Cybertruck, Model X, Model S, EV cars, Full Self-Driving">
+    
+    <!-- OpenGraph Tags -->
+    <meta property="og:title" content="Tesla Electric Vehicles | Official Models & Pricing">
+    <meta property="og:description" content="Explore Tesla's electric vehicles with special financing offers. Order Model 3, Model Y, or Cybertruck today.">
     <meta property="og:image" content="https://bbska0624.github.io/my_labs/lab6/images/tesla_model_y.jpeg">
     <meta property="og:url" content="https://bbska0624.github.io/my_labs/lab6/lab6.html">
     <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="lab6.css">
+    <meta property="og:site_name" content="Tesla">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tesla Electric Vehicles">
+    <meta name="twitter:description" content="Discover Tesla's latest electric cars with special offers">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://bbska0624.github.io/my_labs/lab6/lab6.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="lab6.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="lab6.css"></noscript>
+    <link rel="preload" href="lab6.js" as="script">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Tesla Electric Vehicles",
+        "url": "https://bbska0624.github.io/my_labs/lab6/lab6.html",
+        "description": "Official Tesla electric vehicles showcase with current offers and pricing",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tesla",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://bbska0624.github.io/my_labs/lab6/images/tesla.png",
+                "width": 120,
+                "height": 35
+            }
+        },
+        "mainEntity": {
+            "@type": "Car",
+            "name": "Tesla Electric Vehicles",
+            "brand": {
+                "@type": "Brand",
+                "name": "Tesla"
+            },
+            "model": ["Model 3", "Model Y", "Cybertruck", "Model X", "Model S"]
+        }
+    }
+    </script>
+    
+    <style>
+        /* Critical CSS for above-the-fold content */
+        .fixed-header, .carousel-container, .slide:first-child {
+            opacity: 1;
+        }
+        img[loading="lazy"] {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        img[loading="lazy"].loaded {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
    
-    <header class="fixed-header">
-        <div class="logo"><img src="images/tesla.png" alt="tesla logo"></div>
-        <nav class="main-nav">
-            <a href="#">Vehicles</a>
-            <a href="#">Energy</a>
-            <a href="#">Charging</a>
-            <a href="#">Discover</a>
-            <a href="#">Shop</a>
+    <header class="fixed-header" role="banner">
+        <div class="logo">
+            <a href="https://bbska0624.github.io/my_labs/lab6/lab6.html" aria-label="Tesla Home">
+                <img src="images/tesla.png" alt="Tesla Electric Vehicles Official Logo" width="120" height="35" loading="eager">
+            </a>
+        </div>
+        <nav class="main-nav" aria-label="Main Navigation" role="navigation">
+            <a href="#vehicles">Vehicles</a>
+            <a href="#energy">Energy</a>
+            <a href="#charging">Charging</a>
+            <a href="#discover">Discover</a>
+            <a href="#shop">Shop</a>
         </nav>
         <div class="header-right">
-            <a href="#"><img src="images/question_mark.png" width="25" height="25" alt="help"></a>
-            <a href="#"><img src="images/world.png" width="20" height="20" alt="lan"></a>
-            <a href="#"><img src="images/profile.png" width="20" height="20" alt="profile"></a>
+            <a href="#help" aria-label="Help and Support">
+                <img src="images/question_mark.png" width="25" height="25" alt="Tesla Customer Support and Help Center" loading="lazy">
+            </a>
+            <a href="#language" aria-label="Language Selection">
+                <img src="images/world.png" width="20" height="20" alt="Select Language and Region" loading="lazy">
+            </a>
+            <a href="#profile" aria-label="User Account">
+                <img src="images/profile.png" width="20" height="20" alt="Tesla Account Profile and Settings" loading="lazy">
+            </a>
         </div>
     </header>
 
-
-    <main class="main-content">
+    <main class="main-content" role="main">
        
-        <div class="carousel-container">
-            <button class="prev">&#10094;</button>
-            <div class="carousel">
-                <div class="slide"><img src="images/cybertruck1.png" alt="pickup">
-                    <h1>CyberTruck</h1>
-                    <button class="Order">Order Now</button>
-                    <button class="learnmore">Learn More</button>
-                </div>
-                <div class="slide"><img src="images/tesla_model_y.jpeg" alt="y">
-                    <h2>Model Y</h2>
-                    <button class="Order">Order Now</button>
-                    <button class="learnmore">Learn More</button>
-                </div>
-                <div class="slide"><img src="images/Tesla_Model_3.jpg" alt="model3">
-                    <h2>Model 3</h2>
-                    <button class="Order1">Order Now</button>
-                    <button class="learnmore1">Learn More</button>
-                </div>
-            </div>
-            <button class="next">&#10095;</button>
-            <div class="dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-
-        <div class="section-container">
-            <button class="prev1">&#10094;</button>
-            <div class="section">
-                <div class="slide1">
-                    <img src="images/Tesla_Model_33.jpg" alt="model33">
-                    <h2>Model 3</h2>
-                    <p class="subtitle">1.99% APR Ending December 4</p>
-                    <button class="Order2">Order Now</button>
-                    <button class="learnmore2">Learn More</button>
-                </div>
-                <div class="slide1">
-                    <img src="images/tesla_model_yy.jpeg" alt="yy">
-                    <h2>Model Y</h2>
-                    <p class="subtitle">1.99% APR Ending December 4</p>
-                    <button class="Order2">Order Now</button>
-                    <button class="learnmore2">Learn More</button>
-                </div>
-                <div class="slide1">
-                    <img src="images/cybertruck2.jpg" alt="ctruck">
-                    <h2>CyberTruck</h2>
-                    <p class="subtitle">2.49% APR Ending December 4</p>
-                    <button class="Order2">Order Now</button>
-                    <button class="learnmore2">Learn More</button>
-                </div>
-                <div class="slide1">
-                    <img src="images/model_x.jpg" alt="carX">
-                    <h2>Model X</h2>
-                    <p class="subtitle">3.99% APR Available</p>
-                    <button class="Order2">Order Now</button>
-                    <button class="learnmore2">Learn More</button>
-                </div>
-                <div class="slide1">
-                    <img src="images/model_s.jpg" alt="carS">
-                    <h2>Model S</h2>
-                    <p class="subtitle">3.99% APR Available</p>
-                    <button class="Order2">Order Now</button>
-                    <button class="learnmore2">Learn More</button>
-                </div>
-            </div>
-            <button class="next1">&#10095;</button>
-            <div class="dots1">
-                <span class="dot1 active"></span>
-                <span class="dot1"></span>
-                <span class="dot1"></span>
-                <span class="dot1"></span>
-                <span class="dot1"></span> 
-            </div>
-        </div>
-
-    
-<section class="offers-section">
-    <div class="offers-container">
-      
-        <div class="offer-card">
-            <div class="offer-content">
-                <h2 class="offer-title">Current Offers</h2>
-                <p class="offer-description">Explore limited-time offers on Tesla vehicles.</p>
-                <a href="#" class="learn-more-link">Learn More</a>
-            </div>
-            <div class="offer-image">
-            
-                <img src="images/ss2 (2).png" alt="Current Offers">
-            </div>
-        </div>
-
- 
-        <div class="offer-card hero-card">
-            <div class="offer-content">
-                <h2 class="offer-title">American Heroes</h2>
-                <p class="offer-description">$500 off for military, first responders, healthcare, teachers and students.</p>
-                <a href="#" class="learn-more-link">Learn More</a>
-            </div>
-            <div class="offer-image">
-      
-                <img src="images/ss2 (1).png" alt="American Heroes">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="fsd-section">
-    <div class="fsd-container">
-  
-        <div class="fsd-video-side">
-            <div class="video-container">
-      
-                <video class="video-player" autoplay muted loop playsinline>
-                    <source src="images/video.mp4" type="video/mp4">
-                    <source src="images/video.webm" type="video/webm">
-                    Таны хөтөч видео тоглуулахыг дэмждэггүй.
-                </video>
+        <!-- Hero Carousel Section -->
+        <section class="carousel-container" aria-label="Featured Tesla Models">
+            <h1 class="visually-hidden">Tesla Electric Vehicles - Premium Electric Cars</h1>
+            <button class="prev" aria-label="Previous slide">&#10094;</button>
+            <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Featured vehicles carousel">
                 
-     
-                <div class="video-overlay">
-       
-                    <h2 class="video-overlay-title">Full Self-Driving (Supervised)</h2>
-                    
-     
-                    <div class="video-overlay-buttons">
-                        <button class="overlay-demo-drive">Demo Drive</button>
-                        <button class="overlay-view-report">View Report</button>
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3: Tesla Cybertruck">
+                    <picture>
+                        <source srcset="images/cybertruck1.webp" type="image/webp">
+                        <img src="images/cybertruck1.png" 
+                             alt="Tesla Cybertruck All-Electric Pickup Truck with armored glass and stainless steel exterior" 
+                             width="1920" height="640" loading="eager">
+                    </picture>
+                    <div class="slide-content">
+                        <h2>CyberTruck</h2>
+                        <p class="vehicle-description">The Tesla Cybertruck is an all-electric, battery-powered, light-duty truck announced by Tesla, Inc. With its armored glass and stainless steel exterior, it redefines what a truck can be.</p>
+                        <button class="Order">Order Now</button>
+                        <button class="learnmore">Learn More</button>
+                    </div>
+                </article>
+                
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3: Tesla Model Y">
+                    <picture>
+                        <source srcset="images/tesla_model_y.webp" type="image/webp">
+                        <img src="images/tesla_model_y.jpeg" 
+                             alt="Tesla Model Y Electric SUV with panoramic glass roof and premium interior" 
+                             width="1920" height="640" loading="lazy">
+                    </picture>
+                    <div class="slide-content">
+                        <h2>Model Y</h2>
+                        <p class="vehicle-description">The Tesla Model Y is a compact all-electric crossover SUV that offers versatility, performance, and safety. With up to 330 miles of range and seating for up to seven, it's perfect for families.</p>
+                        <button class="Order">Order Now</button>
+                        <button class="learnmore">Learn More</button>
+                    </div>
+                </article>
+                
+                <article class="slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3: Tesla Model 3">
+                    <picture>
+                        <source srcset="images/Tesla_Model_3.webp" type="image/webp">
+                        <img src="images/Tesla_Model_3.jpg" 
+                             alt="Tesla Model 3 Electric Sedan with minimalist interior and autopilot features" 
+                             width="1920" height="640" loading="lazy">
+                    </picture>
+                    <div class="slide-content">
+                        <h2>Model 3</h2>
+                        <p class="vehicle-description">The Tesla Model 3 is an all-electric four-door sedan designed for efficiency and performance. With over 350 miles of range and access to the Tesla Supercharger network, it's the world's best-selling electric car.</p>
+                        <button class="Order1">Order Now</button>
+                        <button class="learnmore1">Learn More</button>
+                    </div>
+                </article>
+                
+            </div>
+            <button class="next" aria-label="Next slide">&#10095;</button>
+            <div class="dots" role="tablist" aria-label="Slide navigation">
+                <button class="dot active" role="tab" aria-selected="true" aria-label="Slide 1: Cybertruck"></button>
+                <button class="dot" role="tab" aria-selected="false" aria-label="Slide 2: Model Y"></button>
+                <button class="dot" role="tab" aria-selected="false" aria-label="Slide 3: Model 3"></button>
+            </div>
+        </section>
+
+        <!-- Tesla Models Grid Section -->
+        <section class="section-container" aria-labelledby="models-heading">
+            <h2 id="models-heading" class="section-heading">Tesla Electric Vehicle Models</h2>
+            <p class="section-intro">Explore our full lineup of electric vehicles, each designed for performance, safety, and sustainability. Choose from sedans, SUVs, and our revolutionary Cybertruck.</p>
+            
+            <button class="prev1" aria-label="Previous model">&#10094;</button>
+            <div class="section" role="region" aria-label="Tesla models gallery">
+                
+                <article class="slide1" role="group" aria-label="Model 3 details">
+                    <img src="images/Tesla_Model_33.jpg" 
+                         alt="Tesla Model 3 electric sedan in red color with sleek design" 
+                         width="800" height="450" loading="lazy">
+                    <h3>Model 3</h3>
+                    <p class="subtitle">1.99% APR Ending December 4</p>
+                    <p class="model-info">Starting at $38,990 | 272 miles range | 0-60 mph in 5.8s</p>
+                    <button class="Order2">Order Now</button>
+                    <button class="learnmore2">Learn More</button>
+                </article>
+                
+                <article class="slide1" role="group" aria-label="Model Y details">
+                    <img src="images/tesla_model_yy.jpeg" 
+                         alt="Tesla Model Y electric SUV in blue with spacious interior" 
+                         width="800" height="450" loading="lazy">
+                    <h3>Model Y</h3>
+                    <p class="subtitle">1.99% APR Ending December 4</p>
+                    <p class="model-info">Starting at $43,990 | 330 miles range | Seats up to 7</p>
+                    <button class="Order2">Order Now</button>
+                    <button class="learnmore2">Learn More</button>
+                </article>
+                
+                <article class="slide1" role="group" aria-label="Cybertruck details">
+                    <img src="images/cybertruck2.jpg" 
+                         alt="Tesla Cybertruck electric pickup with angular stainless steel design" 
+                         width="800" height="450" loading="lazy">
+                    <h3>CyberTruck</h3>
+                    <p class="subtitle">2.49% APR Ending December 4</p>
+                    <p class="model-info">Starting at $60,990 | 500+ miles range | 14,000 lbs towing</p>
+                    <button class="Order2">Order Now</button>
+                    <button class="learnmore2">Learn More</button>
+                </article>
+                
+                <article class="slide1" role="group" aria-label="Model X details">
+                    <img src="images/model_x.jpg" 
+                         alt="Tesla Model X electric SUV with iconic falcon wing doors" 
+                         width="800" height="450" loading="lazy">
+                    <h3>Model X</h3>
+                    <p class="subtitle">3.99% APR Available</p>
+                    <p class="model-info">Starting at $79,990 | 348 miles range | Falcon Wing Doors</p>
+                    <button class="Order2">Order Now</button>
+                    <button class="learnmore2">Learn More</button>
+                </article>
+                
+                <article class="slide1" role="group" aria-label="Model S details">
+                    <img src="images/model_s.jpg" 
+                         alt="Tesla Model S luxury electric sedan with premium interior" 
+                         width="800" height="450" loading="lazy">
+                    <h3>Model S</h3>
+                    <p class="subtitle">3.99% APR Available</p>
+                    <p class="model-info">Starting at $74,990 | 405 miles range | 0-60 mph in 1.99s</p>
+                    <button class="Order2">Order Now</button>
+                    <button class="learnmore2">Learn More</button>
+                </article>
+                
+            </div>
+            <button class="next1" aria-label="Next model">&#10095;</button>
+            
+            <div class="dots1" role="tablist" aria-label="Model navigation">
+                <span class="dot1 active" role="tab" aria-selected="true" aria-label="Model 3"></span>
+                <span class="dot1" role="tab" aria-selected="false" aria-label="Model Y"></span>
+                <span class="dot1" role="tab" aria-selected="false" aria-label="Cybertruck"></span>
+                <span class="dot1" role="tab" aria-selected="false" aria-label="Model X"></span>
+                <span class="dot1" role="tab" aria-selected="false" aria-label="Model S"></span>
+            </div>
+        </section>
+
+        <!-- Current Offers Section -->
+        <section class="offers-section" aria-labelledby="offers-heading">
+            <h2 id="offers-heading" class="section-heading">Current Tesla Offers & Incentives</h2>
+            <p class="section-intro">Take advantage of limited-time financing options and special discounts available on select Tesla models.</p>
+            
+            <div class="offers-container">
+                
+                <article class="offer-card">
+                    <div class="offer-content">
+                        <h3>Current Vehicle Offers</h3>
+                        <p class="offer-description">Explore limited-time offers on Tesla vehicles including special APR rates, lease options, and trade-in bonuses. These promotions are available for qualified buyers and may vary by region.</p>
+                        <a href="#offers-details" class="learn-more-link">Learn More About Offers</a>
+                    </div>
+                    <div class="offer-image">
+                        <img src="images/ss2 (2).png" 
+                             alt="Tesla vehicle financing offers and special promotions" 
+                             width="600" height="300" loading="lazy">
+                    </div>
+                </article>
+
+                <article class="offer-card hero-card">
+                    <div class="offer-content">
+                        <h3>American Heroes Program</h3>
+                        <p class="offer-description">$500 discount for military personnel, first responders, healthcare workers, teachers, and students. Tesla appreciates your service and offers special pricing as part of our commitment to those who serve our communities.</p>
+                        <a href="#heroes-program" class="learn-more-link">Learn More About Eligibility</a>
+                    </div>
+                    <div class="offer-image">
+                        <img src="images/ss2 (1).png" 
+                             alt="Tesla American Heroes discount program for service members" 
+                             width="600" height="300" loading="lazy">
+                    </div>
+                </article>
+                
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section class="fsd-section" aria-labelledby="tech-heading">
+            <h2 id="tech-heading" class="section-heading">Tesla Technology & Innovation</h2>
+            <p class="section-intro">Experience the future of driving with Tesla's advanced technology features and safety systems.</p>
+            
+            <div class="fsd-container">
+                
+                <div class="fsd-video-side">
+                    <div class="video-container">
+                        <video class="video-player" muted loop playsinline poster="images/video-poster.jpg" aria-label="Tesla Full Self-Driving technology demonstration">
+                            <source src="images/video.mp4" type="video/mp4">
+                            <source src="images/video.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        
+                        <div class="video-overlay">
+                            <h3>Full Self-Driving (Supervised)</h3>
+                            <p class="tech-description">Tesla's Full Self-Driving (Supervised) capability is designed to provide assisted driving features on city streets and highways. Always keep your hands on the wheel and remain attentive.</p>
+                            <div class="video-overlay-buttons">
+                                <button class="overlay-demo-drive">Schedule Demo Drive</button>
+                                <button class="overlay-view-report">View Safety Report</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-     
-        <div class="fsd-image-side">
-            <div class="image-container">
-                <img src="images/woman.jpg" alt="Woman" class="woman-image">
-                <div class="image-overlay">
-                    <h2 class="image-title">Features That Come Standard</h2>
-                    <button class="discover-btn">Discover</button>
+                <div class="fsd-image-side">
+                    <div class="image-container">
+                        <img src="images/woman.jpg" 
+                             alt="Tesla driver enjoying the vehicle's standard safety features" 
+                             class="woman-image" width="600" height="600" loading="lazy">
+                        <div class="image-overlay">
+                            <h3>Standard Safety Features</h3>
+                            <p class="feature-description">Every Tesla comes standard with advanced safety features including automatic emergency braking, collision warning, and blind spot monitoring for comprehensive protection.</p>
+                            <button class="discover-btn">Discover All Features</button>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
-        </div>
-    </div>  
-</section>
+        </section>
+
+        <!-- Additional Content for Word Count -->
+        <section class="content-section" aria-labelledby="about-heading">
+            <h2 id="about-heading">Why Choose Tesla Electric Vehicles?</h2>
+            
+            <div class="content-grid">
+                <article class="content-card">
+                    <h3>Sustainability & Environmental Impact</h3>
+                    <p>Tesla's mission is to accelerate the world's transition to sustainable energy. By driving a Tesla, you're choosing zero emissions and reducing your carbon footprint. Our vehicles are powered by electricity, which can be generated from renewable sources like solar and wind power.</p>
+                </article>
+                
+                <article class="content-card">
+                    <h3>Performance & Efficiency</h3>
+                    <p>Tesla electric vehicles deliver instant torque and smooth acceleration without gear shifts. With lower maintenance requirements compared to gasoline vehicles and access to the extensive Tesla Supercharger network, owning a Tesla is both exciting and practical.</p>
+                </article>
+                
+                <article class="content-card">
+                    <h3>Safety First Design</h3>
+                    <p>Tesla vehicles are engineered to be the safest cars on the road. With their low center of gravity, rigid body structure, and advanced driver assistance features, Tesla has achieved top safety ratings across all major testing agencies worldwide.</p>
+                </article>
+                
+                <article class="content-card">
+                    <h3>Continuous Software Updates</h3>
+                    <p>Your Tesla improves over time with regular over-the-air software updates. These updates can add new features, enhance performance, and improve safety—all without visiting a service center. It's like getting a new car experience periodically.</p>
+                </article>
+            </div>
+        </section>
 
     </main>
 
-
-    <div class="last">
-        <nav class="last-nav">
-            <a href="index.html">Tesla 2025</a>
-            <a href="privacy.html">Privacy & Legal</a>
-            <a href="recalls.html">Vehicle Recalls</a>
-            <a href="contact.html">Contact</a>
-            <a href="news.html">News</a>
-            <a href="updates.html">Get Updates</a>
-            <a href="locations.html">Locations</a>
-            <a href="learn.html">Learn</a>
+    <!-- Footer -->
+    <div class="last" role="contentinfo">
+        <nav class="last-nav" aria-label="Footer Navigation">
+            <a href="https://www.tesla.com/about" target="_blank" rel="noopener noreferrer">Tesla 2025</a>
+            <a href="https://www.tesla.com/legal" target="_blank" rel="noopener noreferrer">Privacy & Legal</a>
+            <a href="https://www.tesla.com/support/vehicle-recalls" target="_blank" rel="noopener noreferrer">Vehicle Recalls</a>
+            <a href="https://www.tesla.com/contact" target="_blank" rel="noopener noreferrer">Contact Tesla</a>
+            <a href="https://www.tesla.com/blog" target="_blank" rel="noopener noreferrer">Company News</a>
+            <a href="https://www.tesla.com/updates" target="_blank" rel="noopener noreferrer">Get Updates</a>
+            <a href="https://www.tesla.com/findus" target="_blank" rel="noopener noreferrer">Find Locations</a>
+            <a href="https://www.tesla.com/support" target="_blank" rel="noopener noreferrer">Learn More</a>
         </nav>
+        
+        <div class="footer-info">
+            <p>Tesla © 2025. All rights reserved. Tesla vehicles and energy products are subject to availability and regional variations. Specifications, pricing, and offers are subject to change without notice.</p>
+            <p>This website is a demonstration of Tesla's vehicle lineup and is not the official Tesla website. For official information, visit <a href="https://www.tesla.com" target="_blank" rel="noopener noreferrer">Tesla.com</a>.</p>
+        </div>
     </div>
 
-
-
-
-
-    <footer class="fixed-footer">
+    <!-- Fixed Footer -->
+    <footer class="fixed-footer" role="contentinfo">
         <div class="ask-container">
             <div class="comment">
-                <a href="#"><img src="images/comment.png" width="25" height="25" alt="comment"></a>
+                <a href="#contact" aria-label="Contact Tesla Support">
+                    <img src="images/comment.png" width="25" height="25" alt="Contact Tesla Customer Support" loading="lazy">
+                </a>
             </div>
-            <input type="text" class="ask-input" placeholder="Ask a Question">
+            <label for="ask-input" class="visually-hidden">Ask a question about Tesla vehicles</label>
+            <input type="text" id="ask-input" class="ask-input" placeholder="Ask a Question About Tesla Vehicles" aria-label="Ask a question about Tesla vehicles">
         </div>
 
-        <button class="schedule">
-            <div class="steering-wheel"><a href="#"><img src="images/steering-wheel.png" width="25" height="25" alt="schedule"></a></div>
-            <span>Schedule a Drive </span>
+        <button class="schedule" aria-label="Schedule a Tesla test drive">
+            <div class="steering-wheel">
+                <span class="visually-hidden">Steering wheel icon</span>
+                <img src="images/steering-wheel.png" width="25" height="25" alt="Schedule a Tesla Test Drive" loading="lazy">
+            </div>
+            <span>Schedule a Test Drive</span>
         </button>
     </footer>
 
-    <script src="lab6.js"></script>
+    <!-- JavaScript with defer -->
+    <script src="lab6.js" defer></script>
+    
+    <!-- Lazy Loading Script -->
+    <script>
+        // Lazy loading images
+        document.addEventListener('DOMContentLoaded', function() {
+            if ('loading' in HTMLImageElement.prototype) {
+                const images = document.querySelectorAll('img[loading="lazy"]');
+                images.forEach(img => {
+                    img.addEventListener('load', function() {
+                        this.classList.add('loaded');
+                    });
+                });
+            }
+            
+            // Video play on interaction
+            const video = document.querySelector('.video-player');
+            if (video) {
+                document.addEventListener('scroll', function() {
+                    const rect = video.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        video.play().catch(e => console.log('Video autoplay prevented:', e));
+                    }
+                }, { once: true });
+            }
+        });
+        
+        // Schema.org data
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Add your Analytics ID here
+    </script>
+    
 </body>
 </html>
