@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МУИС-Нэгдсэн хандалтын орчин</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header хэсэг */
+        .header {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d55b5 100%);
+            color: white;
+            /*padding: 4px 30px;*/
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .header img {
+        display: block; /* Зургийн доорх зайг арилгах */
+        width: 100%; /* Бүтэн өргөн эзлэх */
+        height: auto; /* Өндрийг автоматаар тохируулах */
+        }
+        
+        /*.header h1 {
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }*/
+        
+        
+        /* Гол контейнер */
+        .container {
+            display: flex;
+            min-height: calc(100vh - 120px);
+        }
+        
+        /* Зүүн талын цэсний хэсэг */
+        .sidebar {
+            width: 17%;
+            background-color: white;
+            border-right: 1px solid #eaeaea;
+            height: 100vh;
+        }
+
+        .sidebar img {
+            width: 100%; /* Картын өргөнийг бүрэн эзлэх */
+            object-fit: cover; /* Зургийг харьцааг хадгалан дүүргэнэ */
+            display: block; /* Доод зайг арилгах */
+        }
+       
+        /*urd taliin tseg*/
+        .menu-list {
+            list-style: none;
+        }
+        /*hoorondiin zai*/
+        .menu-list li {
+            margin-bottom: 0px;
+        }
+        /*nuur huudas, huviin medeelel...*/
+        .menu-list a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 8px 32px 8px 50px;
+            display: block;
+            border-radius: 6px;
+            line-height: 2;
+            position: relative;
+        }
+
+        .menu-list a i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            text-align: center;
+            color: #1a3a8f;
+        }
+        
+        .menu-list a:hover {
+            background-color: #f0f4ff;
+            color: #1a3a8f;
+        }
+        
+        /* Гол контентын хэсэг */
+        .main-content {
+            flex: 1;
+            /*display: flex;
+            flex-wrap: wrap;
+            gap: 0px;*/
+            padding: 0;
+        }
+
+        .main-header {
+            background: #f5f7fa;
+            color: black;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            /*height: 100px;*/
+            padding: 15px 0px;
+        }
+        /*Medeelliin zuvshuurul*/
+        .main-header h2 {
+            font-size: 24px;
+            font-weight: 600;
+            padding: 0px 25px;
+            width: 100%
+        }
+        /* Хүснэгт доторх scroll боломжтой болгох */
+        .medeelel-container {
+            background-color: white;
+            border-radius: 15px;
+            height: 570px;
+            width: 1215px;
+            margin-left: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            overflow-y: auto; /* Илүүдэл мөрүүд гарахад scroll гаргах */
+        }
+
+                /* Хүснэгтийн стил */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: center;
+}
+
+.history-table thead {
+    background-color: rgb(229, 234, 247);
+    border-bottom: 2px solid #eaeaea;
+}
+
+.history-table th {
+    padding: 15px 20px;
+    font-weight: 600;
+    color: black;
+    border-bottom: 2px solid #eaeaea;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Header хэсэг -->
+    <header class="header">
+        <img src="images/negdsen.png" alt="negdsen handaltiin orchin">
+        <!--<h1>Нэгдсэн хандалтын орчин</h1>-->
+    </header>
+    
+    <div class="container">
+        <!-- Зүүн талын цэс -->
+        <aside class="sidebar">
+            <img src="images/profile.png" alt="profile">
+            <ul class="menu-list">
+                <li><a href="nuurHuudas.html"><i class="fas fa-home"></i> Нүүр хуудас</a></li>
+                <li><a href><i class="fas fa-user"></i> Хувийн мэдээлэл</a></li>
+                <li><a href="nevtreltTuuh.html"><i class="fas fa-history"></i> Нэвтрэлтийн түүх</a></li>
+                <li><a href="zuvshuurul.html"><i class="fas fa-check-circle"></i> Мэдээллийн зөвшөөрөл</a></li>
+                <li><a href="handsanTuuh.html"><i class="fas fa-search"></i> Мэдээлэлд хандсан түүх</a></li>
+                <li><a href="geree.html"><i class="fas fa-file-contract"></i> Гэрээ</a></li>
+                <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="tuslamj.html"><i class="fas fa-life-ring"></i> Тусламж</a></li>
+            </ul>
+        </aside>
+        
+        <!-- Гол контентын хэсэг -->
+        <main class="main-content">
+            <div class="main-header">
+            <h2>Тусламж</h2>
+            </div>
+
+            <div class="medeelel-container">
+
+                <table class="history-table">
+        <thead>
+            <tr>
+                <th>Мэдээллийн төрөл</th>
+                <th>Ашигласан систем</th>
+                <th>Огноо</th>
+            </tr>
+        </thead>
+
+            </div>
+            
+        </main>
+
+        
+
+    </div>
+    
+</body>
+</html>

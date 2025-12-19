@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нэгдсэн хандалтын орчин</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header хэсэг */
+        .header {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d55b5 100%);
+            color: white;
+            /*padding: 4px 30px;*/
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .header img {
+        display: block; /* Зургийн доорх зайг арилгах */
+        width: 100%; /* Бүтэн өргөн эзлэх */
+        height: auto; /* Өндрийг автоматаар тохируулах */
+        }
+        
+        /*.header h1 {
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }*/
+        
+        
+        /* Гол контейнер */
+        .container {
+            display: flex;
+            min-height: calc(100vh - 120px);
+        }
+        
+        /* Зүүн талын цэсний хэсэг */
+        .sidebar {
+            width: 17%;
+            background-color: white;
+            padding: 25px 20px;
+            border-right: 1px solid #eaeaea;
+        }
+       
+        /*urd taliin tseg*/
+        .menu-list {
+            list-style: none;
+        }
+        /*hoorondiin zai*/
+        .menu-list li {
+            margin-bottom: 15px;
+        }
+        /*nuur huudas, huviin medeelel...*/
+        .menu-list a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 12px;
+            display: block;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        
+        .menu-list a:hover {
+            background-color: #f0f4ff;
+            color: #1a3a8f;
+            padding-left: 18px;
+        }
+        
+        /* Гол контентын хэсэг */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        /*program hangamj*/
+        .section-title {
+            color: #1a3a8f;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            /*border-bottom: 2px solid #eaeaea;*/
+            width: 100%;
+        }
+        /*durvuljin tsagaan hairtsguud*/
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            flex: 1 1 calc(33.333% - 25px);
+            min-width: 250px;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        /*sisi, koha, edx...*/
+        .card h3 {
+            color: #1a3a8f;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /*.card h3::before {
+            content: "•";
+            color: #2d55b5;
+            font-size: 24px;
+            margin-right: 10px;
+        }*/
+        /*hairtsguud dotorh ug*/
+        .card p {
+            color: black;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* Баруун талын мэдээний хэсэг */
+        .right-sidebar {
+            width: 27%;
+            background-color: #f2f3f4;
+            padding: 20px 20px;
+            border-left: 1px solid #eaeaea;
+        }
+        /*hoorondiin zai*/
+        .news-section {
+            margin-bottom: 20px;
+        }
+        /*medee, hicheeliin jiliin tuluvluguu*/
+        .news-title {
+            color: black;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 13px;
+            /*border-bottom: 2px solid #eaeaea;*/
+        }
+        /*hoyor hairtsag*/
+        .news-item {
+            height: 290px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 20px;
+            /*border-left: 4px solid #2d55b5;*/
+        }
+        
+        .news-item h4 {
+            color: #1a3a8f;
+            font-size: 16px;
+            margin-bottom: 15px;
+            margin-top: 5px;
+            text-align: center;
+        }
+        .news-item h5 {
+            color: #1a3a8f;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        /*dotorh text*/
+        .news-item p {
+            color: black;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <!-- Header хэсэг -->
+    <header class="header">
+        <img src="images/negdsen.png" alt="negdsen handaltiin orchin">
+        <!--<h1>Нэгдсэн хандалтын орчин</h1>-->
+    </header>
+    
+    <div class="container">
+        <!-- Зүүн талын цэс -->
+        <aside class="sidebar">
+            <ul class="menu-list">
+                <li><a href="nuurHuudas.html">Нүүр хуудас</a></li>
+                <li><a href="huviin.html">Хувийн мэдээлэл</a></li>
+                <li><a href="nevtreltTuuh.html">Нэвтрэлтийн түүх</a></li>
+                <li><a href="zuvshuurul.html">Мэдээллийн зөвшөөрөл</a></li>
+                <li><a href="handsanTuuh.html">Мэдээлэлд хандсан түүх</a></li>
+                <li><a href="geree.html">Гэрээ</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="tuslamj.html">Тусламж</a></li>
+            </ul>
+        </aside>
+        
+        <!-- Гол контентын хэсэг -->
+        <main class="main-content">
+            <h2 class="section-title">Программ хангамж</h2>
+            <p>Мэдээллийн технологи, электроникийн сургууль</p>
+            
+            <div class="card">
+                <h3>SISI</h3>
+                <p>Сургалт удирдлагын мэдээллийн систем</p>
+            </div>
+
+            <div class="card">
+                <h3>Koha</h3>
+                <p>Номын сангийн мэдээллийн систем</p>
+            </div>
+            
+            <div class="card">
+                <h3>Koha</h3>
+                <p>Цахим номын сан</p>
+            </div>
+            
+            <div class="card">
+                <h3>edX</h3>
+                <p>Цахим сургалтын систем</p>
+            </div>
+            
+            <h2 class="section-title">Байгууллагын үйл ажиллагаа</h2>
+            
+            <div class="card">
+                <h3>NUM career</h3>
+                <p>Карьер зөвлөгөө өгөх үйлчилгээ</p>
+            </div>
+            
+            <div class="card">
+                <h3>Microsoft 365</h3>
+                <p>Outlook, OneDrive, Teams, Calendar, Planner ...</p>
+            </div>
+            
+            
+        </main>
+        
+        <!-- Баруун талын мэдээний хэсэг -->
+        <aside class="right-sidebar">
+            <div class="news-section">
+                <h3 class="news-title">Мэдээ</h3>
+                <div class="news-item">
+                    <h4>Шалгалтын хуваарь</h4>
+                    <p>SISI сургалт удирдлагын мэдээллийн систем дээрх шалгалтын хуваарийг харахын тулд <strong>"Шалгалтын хуваарь"</strong> дээр дарж үзнэ үү.</p>
+                
+                </div>
+            </div>
+            
+            <div class="news-section">
+                <h3 class="news-title">Хичээлийн жилийн төлөвлөгөө</h3>
+                <div class="news-item">
+                    <h5>2025 - 2026 Намар улирал</h5>
+                    <p><strong>16-р долоо хоног</strong></p>
+                    <p>Ахисан түвшний сургалтын хаврын улирлын агуулгын бүртгэл: 11.10 - 01.10</p>
+                    <p>Бакалаврын зэрэгтэй сургалтын хаврын улирлын агуулгын бүртгэл: 12.01 - 02.01</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нэгдсэн хандалтын орчин</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header хэсэг */
+        .header {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d55b5 100%);
+            color: white;
+            /*padding: 4px 30px;*/
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .header img {
+        display: block; /* Зургийн доорх зайг арилгах */
+        width: 100%; /* Бүтэн өргөн эзлэх */
+        height: auto; /* Өндрийг автоматаар тохируулах */
+        }
+        
+        /*.header h1 {
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }*/
+        
+        
+        /* Гол контейнер */
+        .container {
+            display: flex;
+            min-height: calc(100vh - 120px);
+        }
+        
+        /* Зүүн талын цэсний хэсэг */
+        .sidebar {
+            width: 17%;
+            background-color: white;
+            padding: 25px 20px;
+            border-right: 1px solid #eaeaea;
+        }
+       
+        /*urd taliin tseg*/
+        .menu-list {
+            list-style: none;
+        }
+        /*hoorondiin zai*/
+        .menu-list li {
+            margin-bottom: 15px;
+        }
+        /*nuur huudas, huviin medeelel...*/
+        .menu-list a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 12px;
+            display: block;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        
+        .menu-list a:hover {
+            background-color: #f0f4ff;
+            color: #1a3a8f;
+            padding-left: 18px;
+        }
+        
+        /* Гол контентын хэсэг */
+        .main-content {
+            flex: 1;
+            /*display: flex;
+            flex-wrap: wrap;
+            gap: 0px;*/
+            padding: 0;
+        }
+
+        .main-header {
+            background: #f5f7fa;
+            color: black;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            /*height: 100px;*/
+            padding: 15px 0px;
+        }
+        /*Program hangamj*/
+        .main-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            padding: 0px 25px;
+        }
+        /*Medeelliin...*/
+        .main-header p {
+            font-size: 14px;
+            opacity: 0.7;
+            border-bottom: 2px solid #eaeaea;
+            padding: 0px 25px;
+            padding-bottom: 6px; /* Нэмэлт доод зай */
+        }
+
+        .main-boxtoiHeseg {
+            padding: 0 25px;
+            display: flex; /* flex нэмэх */
+            flex-wrap: wrap; /* wrap нэмэх */
+            gap: 25px; /* Картууд хоорондын зай */
+        }
+        /*surgalt, sudalgaa*/
+        .section-title {
+            font-size: 16px;
+            font-weight: 600; 
+            opacity: 0.7;
+            width: 100%;
+        }
+
+        /*durvuljin tsagaan hairtsguud*/
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            /*padding: 10px;*/
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s;
+            height: 105px;
+            flex: 0 0 calc(32% - 10px); /* Нэг мөрөнд 3 карт, зайг тооцсон */
+            min-width: 200px; /* Хамгийн багадаа ийм өргөн */
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            display: block; /* Зургийн доорх зайг арилгах */
+            width: 100%; /* Бүтэн өргөн эзлэх */
+            height: auto; /* Өндрийг автоматаар тохируулах */
+        }
+
+        /*sisi, koha, edx...*/
+        .card h3 {
+            color: #1a3a8f;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /*.card h3::before {
+            content: "•";
+            color: #2d55b5;
+            font-size: 24px;
+            margin-right: 10px;
+        }*/
+        /*hairtsguud dotorh ug*/
+        .card p {
+            color: black;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* Баруун талын мэдээний хэсэг */
+        .right-sidebar {
+            width: 27%;
+            background-color: #f2f3f4;
+            padding: 20px 20px;
+            border-left: 1px solid #eaeaea;
+        }
+        /*hoorondiin zai*/
+        .news-section {
+            margin-bottom: 20px;
+        }
+        /*medee, hicheeliin jiliin tuluvluguu*/
+        .news-title {
+            color: black;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 13px;
+            /*border-bottom: 2px solid #eaeaea;*/
+        }
+        /*hoyor hairtsag*/
+        .news-item {
+            height: 290px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 20px;
+            /*border-left: 4px solid #2d55b5;*/
+        }
+        
+        .news-item h4 {
+            color: #1a3a8f;
+            font-size: 16px;
+            margin-bottom: 15px;
+            margin-top: 5px;
+            text-align: center;
+        }
+        .news-item h5 {
+            color: #1a3a8f;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        /*dotorh text*/
+        .news-item p {
+            color: black;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <!-- Header хэсэг -->
+    <header class="header">
+        <img src="images/negdsen.png" alt="negdsen handaltiin orchin">
+        <!--<h1>Нэгдсэн хандалтын орчин</h1>-->
+    </header>
+    
+    <div class="container">
+        <!-- Зүүн талын цэс -->
+        <aside class="sidebar">
+            <ul class="menu-list">
+                <li><a href="nuurHuudas.html">Нүүр хуудас</a></li>
+                <li><a href="huviin.html">Хувийн мэдээлэл</a></li>
+                <li><a href="nevtreltTuuh.html">Нэвтрэлтийн түүх</a></li>
+                <li><a href="zuvshuurul.html">Мэдээллийн зөвшөөрөл</a></li>
+                <li><a href="handsanTuuh.html">Мэдээлэлд хандсан түүх</a></li>
+                <li><a href="geree.html">Гэрээ</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="tuslamj.html">Тусламж</a></li>
+            </ul>
+        </aside>
+        
+        <!-- Гол контентын хэсэг -->
+        <main class="main-content">
+            <div class="main-header">
+            <h2>Программ хангамж</h2>
+            <p>Мэдээллийн технологи, электроникийн сургууль</p>
+            </div>
+
+            <div class="main-boxtoiHeseg">
+
+            <h2 class="section-title">Сургалт, судалгаа</h2>
+
+            <div class="card">
+                <h3>SISi</h3>
+                <img src="images/sisi.png" alt="sisi">
+                <p>Сургалт удирдлагын мэдээллийн систем</p>
+            </div>
+
+            <div class="card">
+                <h3>Koha</h3>
+                <p>Номын сангийн мэдээллийн систем</p>
+            </div>
+            
+            <div class="card">
+                <h3>Koha</h3>
+                <p>Цахим номын сан</p>
+            </div>
+            
+            <div class="card">
+                <h3>edX</h3>
+                <p>Цахим сургалтын систем</p>
+            </div>
+            
+            
+            <h2 class="section-title">Байгууллагын үйл ажиллагаа</h2>
+            
+            <div class="card">
+                <h3>NUM career</h3>
+                <p>Карьер хөгжлийг дэмжих үйлчилгээ</p>
+            </div>
+            
+            <div class="card">
+                <h3>Microsoft 365</h3>
+                <p>Outlook, OneDrive, Teams, Calendar, Planner ...</p>
+            </div>
+            </div>
+            
+        </main>
+        
+        <!-- Баруун талын мэдээний хэсэг -->
+        <aside class="right-sidebar">
+            <div class="news-section">
+                <h3 class="news-title">Мэдээ</h3>
+                <div class="news-item">
+                    <h4>Шалгалтын хуваарь</h4>
+                    <p>SISI сургалт удирдлагын мэдээллийн систем дээрх шалгалтын хуваарийг харахын тулд <strong>"Шалгалтын хуваарь"</strong> дээр дарж үзнэ үү.</p>
+                
+                </div>
+            </div>
+            
+            <div class="news-section">
+                <h3 class="news-title">Хичээлийн жилийн төлөвлөгөө</h3>
+                <div class="news-item">
+                    <h5>2025 - 2026 Намар улирал</h5>
+                    <p><strong>16-р долоо хоног</strong></p>
+                    <p>Ахисан түвшний сургалтын хаврын улирлын агуулгын бүртгэл: 11.10 - 01.10</p>
+                    <p>Бакалаврын зэрэгтэй сургалтын хаврын улирлын агуулгын бүртгэл: 12.01 - 02.01</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+</body>
+</html>

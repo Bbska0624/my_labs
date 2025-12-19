@@ -53,6 +53,7 @@
             width: 17%;
             background-color: white;
             border-right: 1px solid #eaeaea;
+            height: 100vh;
         }
 
         .sidebar img {
@@ -115,19 +116,22 @@
             /*height: 100px;*/
             padding: 15px 0px;
         }
-        /*Program hangamj*/
+        /*Medeelliin zuvshuurul*/
         .main-header h2 {
-            font-size: 18px;
+            font-size: 24px;
             font-weight: 600;
             padding: 0px 25px;
+            width: 100%
         }
-        /*Medeelliin...*/
-        .main-header p {
-            font-size: 14px;
-            opacity: 0.7;
-            border-bottom: 2px solid #eaeaea;
-            padding: 0px 25px;
-            padding-bottom: 6px; /* Нэмэлт доод зай */
+        /* Хүснэгт доторх scroll боломжтой болгох */
+        .medeelel-container {
+            background-color: white;
+            border-radius: 15px;
+            height: 580px;
+            width: 1215px;
+            margin-left: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 20px;
         }
 
         .main-boxtoiHeseg {
@@ -136,22 +140,13 @@
             flex-wrap: wrap; /* wrap нэмэх */
             gap: 25px; /* Картууд хоорондын зай */
         }
-        /*surgalt, sudalgaa*/
-        .section-title {
-            font-size: 16px;
-            font-weight: 600; 
-            opacity: 0.7;
-            width: 100%;
-        }
 
         /*durvuljin tsagaan hairtsguud*/
         .card {
-            background-color: white;
+            background-color: rgb(238, 241, 250);
             border-radius: 15px;
-            /*padding: 10px;*/
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: box-shadow 0.3s;
-            height: 105px;
+            height: 165px;
             flex: 0 0 calc(32% - 10px); /* Нэг мөрөнд 3 карт, зайг тооцсон */
             min-width: 200px; /* Хамгийн багадаа ийм өргөн */
             overflow: hidden; /* ЭНЭ МӨРИЙГ НЭМЭХ */
@@ -161,67 +156,14 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
-
         .card img {
             width: 100%; /* Картын өргөнийг бүрэн эзлэх */
-            height: 100%; /* Картын өндрийг бүрэн эзлэх */
+            height: auto; /* Картын өндрийг бүрэн эзлэх */
             object-fit: cover; /* Зургийг харьцааг хадгалан дүүргэнэ */
             display: block; /* Доод зайг арилгах */
         }
 
-        
-        /* Баруун талын мэдээний хэсэг */
-        .right-sidebar {
-            width: 27%;
-            background-color: #f2f4f8;
-            padding: 20px 20px;
-            border-left: 1px solid #eaeaea;
-        }
-        /*hoorondiin zai*/
-        .news-section {
-            margin-bottom: 20px;
-        }
-        /*medee, hicheeliin jiliin tuluvluguu*/
-        .news-title {
-            color: black;
-            font-size: 16px;
-            font-weight: 400;
-            margin-bottom: 13px;
-            opacity: 0.7;
-            /*border-bottom: 2px solid #eaeaea;*/
-        }
-        /*hoyor hairtsag*/
-        .news-item {
-            height: 290px;
-            background-color: white;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
-            /*border-left: 4px solid #2d55b5;*/
-        }
-        
-        .news-item h4 {
-            color: #1a3a8f;
-            font-size: 16px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        .news-item h5 {
-            color: #1a3a8f;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        /*dotorh text*/
-        .news-item p {
-            color: black;
-            font-size: 14px;
-            line-height: 1.5;
-            text-align: justify;
-            line-height: 1.2;
-        }
-        
-        
-        
+
     </style>
 </head>
 <body>
@@ -250,69 +192,60 @@
         <!-- Гол контентын хэсэг -->
         <main class="main-content">
             <div class="main-header">
-            <h2>Программ хангамж</h2>
-            <p>Мэдээллийн технологи, электроникийн сургууль</p>
+            <h2>Түгээмэл асуултууд</h2>
             </div>
 
-            <div class="main-boxtoiHeseg">
+            <div class="medeelel-container">
 
-            <h2 class="section-title">Сургалт, судалгаа</h2>
+                <div class="main-boxtoiHeseg">
 
-            <div class="card">
-                <img src="images/sisi.png" alt="sisi">
-            </div>
 
             <div class="card">
-                <img src="images/koha1.png" alt="sisi">
+                <img src="images2/elselt.png" alt="profile">
+            </div>
+
+            <div class="card">
+                <img src="images2/system.png" alt="profile">
             </div>
             
             <div class="card">
-                <img src="images/koha2.png" alt="sisi">
+                <img src="images2/suljee.png" alt="profile">
             </div>
             
             <div class="card">
-                <img src="images/edx.png" alt="sisi">
+                <img src="images2/hicheel.png" alt="profile">
             </div>
             
             
-            <h2 class="section-title">Байгууллагын үйл ажиллагаа</h2>
-            
             <div class="card">
-                <img src="images/NUM.png" alt="sisi">
+                <img src="images2/hutulbur.png" alt="profile">
             </div>
             
             <div class="card">
-                <img src="images/365.png" alt="sisi">
+                <img src="images2/oyutan.png" alt="profile">
             </div>
+
+            <div class="card">
+                <img src="images2/tugsult.png" alt="profile">
+            </div>
+            
+            
+            <div class="card">
+                <img src="images2/busad.png" alt="profile">
+            </div>
+            
+            <div class="card">
+                <img src="images2/asuult.png" alt="profile">
+            </div>
+
+            </div>
+
             </div>
             
         </main>
+
         
-        <!-- Баруун талын мэдээний хэсэг -->
-        <aside class="right-sidebar">
-            <div class="news-section">
-                <h3 class="news-title">Мэдээ</h3>
-                <div class="news-item">
-                    <h4>Шалгалтын хуваарь</h4>
-                    <p>Энэ улирлын шалгалтын хуваариа <strong>SISi</strong> 
-                    сургалт удирдлагын мэдээллийн системийн зүүн талд байрлах <strong>Шалгалтын хуваарь</strong> 
-                    цэс дээр дарж харна уу.</p>
-                
-                </div>
-            </div>
-            
-            <div class="news-section">
-                <h3 class="news-title">Хичээлийн жилийн төлөвлөгөө</h3>
-                <div class="news-item">
-                    <h5>2025 - 2026 Намар улирал</h5>
-                    <p><strong>16-р долоо хоног</strong></p>
-                    <p>Ахисан түвшний сургалтын хаврын улирлын агуулгын бүртгэл: <br>
-                        11.10 - 01.10</p>
-                    <p>Бакалаврын зэрэгтэй сургалтын хаврын улирлын агуулгын бүртгэл: <br>
-                        12.01 - 02.01</p>
-                </div>
-            </div>
-        </aside>
+
     </div>
     
 </body>
